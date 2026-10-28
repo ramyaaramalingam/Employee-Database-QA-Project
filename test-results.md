@@ -14,15 +14,13 @@
 | TC-005 | Check for negative salaries | No negative salaries | No negative salaries found | PASS |
 | TC-006 | Check for invalid employment statuses | No invalid statuses | No invalid statuses found | PASS |
 | TC-007 | Attempt to insert a duplicate email | Database rejects the record | SQLite rejected the insert with a UNIQUE constraint error | PASS |
+| TC-008 | Attempt to insert an employee with a missing first name | Database rejects the record | SQLite rejected the insert with a NOT NULL constraint error | PASS |
+| TC-009 | Attempt to insert an invalid employment status | Database rejects the record | SQLite rejected the insert with a CHECK constraint error | PASS |
 
 ## Summary
 
-Seven database validation tests were performed against the fictional employee dataset. The clean-data checks returned the expected results. The negative test confirmed that the database's unique email constraint prevented a duplicate email from being inserted.
+Nine database QA test cases were documented and executed against a fictional employee dataset. The six data-validation checks returned the expected results, and three negative tests confirmed that SQLite rejected records containing a duplicate email address, a missing required first name, and an invalid employment status.
 
-These results demonstrate basic SQL validation, negative testing, expected-versus-actual result comparison, and test documentation.
+All nine test cases passed based on their expected results.
 
-| TC-008 | Attempt to insert an employee with a missing first name | Database rejects the record | SQLite rejected the insert with a NOT NULL constraint error | PASS |
-
-
-| TC-009 | Attempt to insert an invalid employment status | Database rejects the record | SQLite rejected the insert with a CHECK constraint error | PASS |
-
+This project demonstrates basic SQL validation, negative testing, database constraint verification, expected-versus-actual result comparison, and test documentation.
